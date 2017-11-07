@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+   <script src="js/jquery-3.2.1.js"></script>
+   <script src="js/scripts.js"></script>
+    <title>Gino Bambino Pizza Pies</title>
+  </head>
+    <body>
+      <div class="container">
+      <h1 id="header">Welcome to Gino Bambino's Pizza Pie! Tell us what you would like for dinner tonight.</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="info">
+            <div class="form-group">
+             <label for="name">What is your full name:</label>
+             <input id="name" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+             <label for="address">What is your address:</label>
+             <input id="address" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="size">What size pizza pie:</label>
+              <select class="form-control" id="size">
+                <option>personal ($9)</option>
+                <option>medium ($13)</option>
+                <option>big bambino! ($18)</option>
+              </select>
+            </div>
+                <form id="toppings">
+                   <div class="form-group">
+                     <p>Add these toppings to my pizza pie ($1ea):</p>
+                     <div id="toppings-box">
+                     <input type="checkbox" name="pizza-topping" value="pepperoni"> Pepperoni<br>
+                     <input type="checkbox" name="pizza-topping" value="sausage"> Italian Sausage<br>
+                     <input type="checkbox" name="pizza-topping" value="ham"> Canadian Bacon<br>
+                     <input type="checkbox" name="pizza-topping" value="mushrooms"> Mushrooms<br>
+                     <input type="checkbox" name="pizza-topping" value="olives"> Olives<br>
+                     <input type="checkbox" name="pizza-topping" value="peppers"> Bell Peppers<br>
+                     <input type="checkbox" name="pizza-topping" value="pineapple"> Pineapple<br>
+                     <input type="checkbox" name="pizza-topping" value="jalapenos"> Jalapenos<br>
+                     <input type="checkbox" name="pizza-topping" value="bacon"> Bacon<br>
+                     <input type="checkbox" name="pizza-topping" value="chicken"> Chicken<br>
+                     <input type="checkbox" name="pizza-topping" value="artichoke"> Artichoke<br>
+                     <input type="checkbox" name="pizza-topping" value="anchovies"> Anchovies<br>
+                     <input type="checkbox" name="pizza-topping" value="kale"> Kale<br>
+                   </div>
+                   </div>
+            <span class="btn btn-primary" id="add-language">Add toppings</span>
+            <button type="submit" class="btn">Submit order to Gino!</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img src="img/gino-pie.jpg" alt="Picture of a confused coder.">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
