@@ -15,14 +15,6 @@
         <div class="col-md-6">
           <form id="info">
             <div class="form-group">
-             <label for="name">What is your full name:</label>
-             <input id="name" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-             <label for="address">What is your address:</label>
-             <input id="address" class="form-control" type="text">
-            </div>
-            <div class="form-group">
               <label for="size">What size pizza pie:</label>
               <select class="form-control" id="size">
                 <option>personal ($9)</option>
@@ -48,13 +40,16 @@
                      <input type="checkbox" name="pizza-topping" value="anchovies"> Anchovies<br>
                      <input type="checkbox" name="pizza-topping" value="kale"> Kale<br>
                    </div>
-                   </div>
-            <span class="btn btn-primary" id="add-language">Add toppings</span>
+                </div>
             <button type="submit" class="btn">Submit order to Gino!</button>
           </form>
+          <h1 id="your-order"> Heres what Gino is whipping up for you!</h1>
+          <h2 id="your-size"></h2>
+          <ul id="your-toppings">
+          </ul>
         </div>
         <div class="col-md-6">
-          <img src="img/gino-pie.jpg" alt="Picture of a confused coder.">
+          <img src="img/gino-pie.jpg" alt="Picture of a Gino the Pizza Wizz.">
         </div>
       </div>
     </div>
