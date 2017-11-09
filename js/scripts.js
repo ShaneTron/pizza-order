@@ -1,23 +1,23 @@
 //back-end
 
-//function YourPizza(size, toppings) {
- //this.size = size;
- //this.toppings = toppings;
- //this.price = 0;
- //};
+function YourPizza(size) {
+ this.size = size;
+ this.toppings = [];
+ this.price = [];
+ };
 
-  //YourPizza.prototype.calculatePrice = function() {
-  //  if (this.size === 'personal ($9)') {
-    //  price = 9 //+ this.toppings.length;
-    //}
-    //if (this.size === 'medium ($13)') {
-    //  price = 13 //+ this.toppings.length;
-    //}
-  //  if (this.size === 'big bambino! ($18)') {
-    //  price = 18 //+ this.toppings.length;
-    //}
-    //return price;
-  //}
+  YourPizza.prototype.calculatePrice = function() {
+    var price = 0;
+    if (this.size === 'personal ($9)') {
+     return price = 9 + this.toppings.length;
+    }
+    if (this.size === 'medium ($13)') {
+     return price = 13 + this.toppings.length;
+    }
+    if (this.size === 'big bambino! ($18)') {
+     return price = 18 + this.toppings.length;
+   }
+  }
 
 
 
@@ -30,15 +30,17 @@ $(document).ready(function() {
 
       $(".size").text(size);
 
+      var customerPizza = new YourPizza(size, toppings)
+
     $("input:checkbox[name=pizza-topping]:checked").each(function() {
-      var toppings = $(this).val();
+      var allYourToppings = $(this).val();
       $(".toppings").append(allYourToppings + " ");
+      customerPizza.toppings.push(allYourToppings);
     });
 
-     //var customerPizza = new YourPizza(size, allYourToppings)
-     //var totalPrice = customerPizza.calculatePrice()
+    var totalPrice = customerPizza.calculatePrice()
 
     $("#show-your-order").show();
-    //$(".total-price").text(price.toString());
+    $(".total-price").text(totalPrice);
   });
 });
