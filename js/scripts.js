@@ -23,9 +23,9 @@ function YourPizza(size) {
 
 //front-end
 $(document).ready(function() {
-
   $("#how-you-like-it").submit(function(event) {
     event.preventDefault();
+
       var size = $("#size").val();
 
       $(".size").text(size);
