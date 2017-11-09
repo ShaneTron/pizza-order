@@ -1,27 +1,23 @@
 //back-end
 
-function YourPizza(yourSize, yourToppings, yourPrice) {
- this.size = yourSize;
- this.toppings = yourToppings;
- this.price = yourPrice;
- }
+//function YourPizza(size, toppings) {
+ //this.size = size;
+ //this.toppings = toppings;
+ //this.price = 0;
+ //};
 
-  var pizza = new YourPizza("#size", ["#toppings"])
-
-  YourPizza.prototype.calculatePrice()
-  if yourPizza.yourSize === 'personal ($9)' {
-    yourPizza.price = 9 + yourToppings.length;
-  }
-  else if yourPizza.yourSize === 'medium ($13)' {
-    yourPizza.price = 13 + yourToppings.length;
-  }
-  else if yourPizza.yourSize === 'big bambino! ($18)' {
-    yourPizza.price = 18 + yourToppings.length;
-  };
-
-
-
-
+  //YourPizza.prototype.calculatePrice = function() {
+  //  if (this.size === 'personal ($9)') {
+    //  price = 9 //+ this.toppings.length;
+    //}
+    //if (this.size === 'medium ($13)') {
+    //  price = 13 //+ this.toppings.length;
+    //}
+  //  if (this.size === 'big bambino! ($18)') {
+    //  price = 18 //+ this.toppings.length;
+    //}
+    //return price;
+  //}
 
 
 
@@ -30,17 +26,19 @@ $(document).ready(function() {
 
   $("#how-you-like-it").submit(function(event) {
     event.preventDefault();
-      var yourSize = $("#size").val();
+      var size = $("#size").val();
 
-      $(".size").text(yourSize);
+      $(".size").text(size);
 
-    $("input:checkbox[name=pizza-topping]:checked").each(function(){
-      var allYourToppings = $(this).val();
+    $("input:checkbox[name=pizza-topping]:checked").each(function() {
+      var toppings = $(this).val();
       $(".toppings").append(allYourToppings + " ");
     });
 
+     //var customerPizza = new YourPizza(size, allYourToppings)
+     //var totalPrice = customerPizza.calculatePrice()
 
     $("#show-your-order").show();
-    $(".total-price").text(YourPizza.yourPrice.toString());
+    //$(".total-price").text(price.toString());
   });
 });
